@@ -22,6 +22,38 @@
 
 ## ¿Como es su Diagrama de clases de este ejemplo que has hecho? Realiza en el readme el diagrama
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Diagrama de clases
+
+```mermaid
+classDiagram
+class Main{ 
+        Refuerzo conMorzilla
+        +main()
+      }
+      Main "1" -- "1..*" BuilderRefuerzo :Hambre
+      class BuilderRefuerzo{
+          +buildRefuerzo()
+      }
+      BuilderRefuerzo "1" *-- "1" Refuerzo : construye
+      class Refuerzo {+Refuerzo()}      
+```
 ## ¿Podríamos combinarlo con el patrón Factory? Explícalo con algo de código como lo harías
 
  Para esto se podria tener como idea, el usar el el builder dentro del factory, ya sea metiendolo dentro de algun switch, para agilizar el cambio de idioma humano (Español, Ingles, Chino, etc..).
