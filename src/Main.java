@@ -1,5 +1,11 @@
 public class Main {
         public static void main(String[] args) {
-                System.out.println("Hello world!");
+
+                //testeo
+                Refuerzo refuerzoDefault;
+                BuilderRefuerzo obj = new BuilderRefuerzo();
+                obj.setHowTake(Refuerzo.SHOP);
+                obj.setTomato(true);
+                refuerzoDefault = obj.build();
         }
 }
